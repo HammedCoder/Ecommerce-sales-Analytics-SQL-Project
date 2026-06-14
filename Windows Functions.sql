@@ -35,15 +35,17 @@ SELECT
         ) AS Previous_Month,
         
 	ROUND(Month_Revenue - LAG(Month_Revenue) OVER (
-		ORDER BY Month
+		ORDER BY `Month`
         ),2) AS Growth
 	FROM (
 		SELECT 
-			Month(`Order Date`) AS `Month`,
+			MONTH(`Order Date`) AS `Month`,
+            YEAR(`Order Date`) AS `Year`,
             ROUND(SUM(Sales),2) AS Month_Revenue
 		FROM orders
-        GROUP BY `Month`
-) T;
+        GROUP BY `Month`, `Year`
+) T
+;
 
     
     
