@@ -1,9 +1,11 @@
 SELECT * FROM locations;
+
+-- Most Performed Region By Revenue
 SELECT 
 	L.Region,
-    SUM(O.sales) AS REVENUE    
-from Orders O
-join locations L
-on O.`location ID` = l.`Location ID`
-group by L.Region
-order by Revenue desc;
+    ROUND(SUM(O.sales),2) AS REVENUE    
+FROM Orders O
+JOIN locations L
+ON O.`location ID` = L.`Location ID`
+GROUP BY L.Region
+ORDER BY Revenue desc;
