@@ -83,6 +83,15 @@ GROUP BY `Product ID`
 ORDER BY SUM_OF_PROFITS DESC
 LIMIT 10;
 
+-- TOP Most Profitable Products
+SELECT 
+	`Product ID`,
+	ROUND(SUM(Profit)) AS SUM_OF_PROFITS
+FROM orders
+GROUP BY `Product ID`
+ORDER BY SUM_OF_PROFITS DESC
+LIMIT 1;
+
 -- Impact of Discount
 
 SELECT 
