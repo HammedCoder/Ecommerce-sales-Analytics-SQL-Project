@@ -13,13 +13,50 @@ locations
 
 -- Step 7: Writing Business Queries
 -- 1: Total Revenues
+select * from products;
 
+-- Best Performaing Product By Category
+select 
+	p.category,
+    sum(o.sales) as revenue
+	
+from orders o
+join products p
+on o.`Product ID` = p.`Product ID`
+group by p.category
+order by revenue desc;
+
+-- Best Performing Products by Sub-Category
+select 
+	p.`sub-category`,
+    sum(o.sales) as revenue
+	
+from orders o
+join products p
+on o.`Product ID` = p.`Product ID`
+group by p.`sub-category`
+order by revenue desc
+limit 10;
+
+-- Best Performing Products
+select 
+	p.`product Name`,
+    sum(o.sales) as revenue
+	
+from orders o
+join products p
+on o.`Product ID` = p.`Product ID`
+group by p.`product Name`
+order by revenue desc
+limit 3;
+
+-- Total Revenue
 SELECT round(SUM(O.sales), 2) AS Total_Revenues
 FROM orders O;			-- Total Revenue = 2,297,200.86
 
--- 2: Total Sales
-SELECT COUNT(O.`order id`) AS Toal_Sales
-FROM orders O;			-- Total Sales = 9,994
+-- 2: Total Orders
+SELECT COUNT(distinct `order id`) AS Total_Orders
+FROM orders;			-- Total Sales = 9,994
 
 -- 3 Total Profit
 SELECT ROUND(SUM(O.profit), 2) AS Total_Profit
@@ -62,7 +99,7 @@ GROUP BY Year, Month
 ORDER BY Year, Month;
 
 
--- 8: Top 10 Customersby Revenue
+-- 8: Top 10 Customers by Revenue
 desc customers;
 SELECT 
 	C.`Customer Name`,

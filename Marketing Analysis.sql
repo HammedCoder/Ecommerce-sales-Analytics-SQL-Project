@@ -12,13 +12,13 @@ ORDER BY Total_Spent desc;
 SELECT 
 	M.`Channel`,
     SUM(M.Spend) Total_Spent,
-    COUNT(C.Customer_ID),
-    ROUND(SUM(M.Spend) / COUNT(C.Customer_id))
+    COUNT(C.Customer_ID) AS Total_Customer_Acquired,
+    ROUND(SUM(M.Spend) / COUNT(C.Customer_id)) AS Cost_Per_Customer
 FROM marketing_campaigns M
 JOIN customer_acquisition C
 ON M.`Channel` = C.Acquisition_Channel
 GROUP BY M.`Channel`
-ORDER BY Total_Spent desc
+ORDER BY Cost_Per_Customer ASC
 ;
 
 -- MOST EFFECTIVE ACQUISITION CHANNEL
