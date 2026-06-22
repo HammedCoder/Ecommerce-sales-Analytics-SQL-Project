@@ -37,13 +37,13 @@ The project uses an enterprise-style e-commerce dataset containing:
 - Customer Acquisition
 - Web Analytics
 
-Business Insights
+## Business Insights
 
-Executive Summary
+### Executive Summary
 
 This project analyzes an e-commerce dataset using SQL, MySQL, and Python to uncover insights into sales performance, profitability, customer behavior, and product performance.
 
-Key Performance Indicators (KPIs)
+### Key Performance Indicators (KPIs)
 
 Metric| Value
 Total Revenue| $2,297,200.86
@@ -52,31 +52,31 @@ Profit Margin| 12.47%
 
 ---
 
-Key Findings
+### Key Findings
 
-Revenue and Profitability
+- Revenue and Profitability
 
 The business generated over $2.29 million in revenue and $286.4 thousand in profit, resulting in a healthy profit margin of 12.47%.
 
-Regional Performance
+- Regional Performance
 
 The West Region emerged as the highest-performing region based on total sales revenue.
 
-Business Recommendation:
+## Business Recommendation:
 
 - Investigate factors contributing to the West Region's success.
 - Replicate successful sales and marketing strategies in other regions.
 
-Product Category Performance
+- Product Category Performance
 
 Technology was the best-performing category in terms of revenue generation.
 
-Business Recommendation:
+## Business Recommendation:
 
 - Increase marketing investment in technology products.
 - Maintain adequate inventory levels to meet demand.
 
-Top Product Subcategories
+## Top Product Subcategories
 
 The highest-performing subcategories were:
 
@@ -86,12 +86,12 @@ The highest-performing subcategories were:
 4. Tables
 5. Accessories
 
-Business Recommendation:
+## Business Recommendation:
 
 - Prioritize these products in inventory planning.
 - Consider cross-selling and upselling opportunities.
 
-Customer Analysis
+### Customer Analysis
 
 The top revenue-generating customers were:
 
@@ -99,23 +99,23 @@ The top revenue-generating customers were:
 2. Tamara Chand
 3. Raymond Buch
 
-Business Recommendation:
+## Business Recommendation:
 
 - Implement customer retention and loyalty programs.
 - Offer personalized promotions to high-value customers.
 
-Discount Impact Analysis
+### Discount Impact Analysis
 
 Analysis showed that higher discount levels negatively affected profitability.
 
-Business Recommendation:
+## Business Recommendation:
 
 - Limit excessive discounting.
 - Monitor promotional campaigns to balance revenue growth and profit margins.
 
 ---
 
-Business Value
+## Business Value
 
 This analysis demonstrates how SQL can be used to transform raw transactional data into actionable business insights that support:
 
